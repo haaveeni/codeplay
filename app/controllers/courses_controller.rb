@@ -7,4 +7,9 @@ class CoursesController < ApplicationController
         @course = Course.find(params[:id])
     end
 
+    def new
+        @courses = Course.new(params.require(:course).permit(:name, :description, :code, :price, :enrollment_deadline))
+        @courses.save
+    end
+
 end
