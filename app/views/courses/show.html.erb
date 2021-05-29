@@ -1,4 +1,4 @@
-<%= alert %>
+<%= flash[:notice] %>
 
 <h1><%= @course.name %></h1>
 <dl>
@@ -12,4 +12,5 @@
 <dd><%= @course.enrollment_deadline.strftime('%d/%m/%Y') %></dd>
 </dl>
 <%= link_to 'Editar', edit_course_path(@course) %>
+<%= link_to 'Apagar', @course, method: :delete %>
 <%= link_to 'Voltar', courses_path %>
