@@ -6,8 +6,7 @@
 <h1><%= link_to course.name, course %></h1>
 <p><%= course.description %></p>
 <p><%= number_to_currency course.price, unit: 'R$', separator: ',', delimitor: '.', format: '%u %n'%></p>
-
 <% end %>
 
 <%= link_to 'Voltar', root_path %>
-<a href= <%=new_course_path %> >Registrar um Curso</a>
+<a href= <%= new_course_path %> >Registrar um Curso</a>
